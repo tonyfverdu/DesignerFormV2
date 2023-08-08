@@ -1,0 +1,10 @@
+@use '../../myvariables' as v;
+@use '../../layouts' as l;
+@use '../../neumorphismus' as n;
+
+.contIcons {
+  @include l.layoutFlexboxRowCenter;
+  @include n.neuMorphismus4;
+  height: auto;
+  margin-bottom: 0.5rem;
+}

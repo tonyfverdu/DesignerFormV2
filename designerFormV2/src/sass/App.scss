@@ -1,0 +1,171 @@
+@use './layouts' as l;
+@use './myvariables' as v;
+@use './designElement' as d;
+@use './neumorphismus' as n;
+
+
+.contCentral {
+  @include d.designContainerCentral;
+
+  .containerApp {
+    width: 100vw;
+    height: auto;
+
+    &>.contIconExit {
+      @include n.teclaNeumorphismus1;
+      position: absolute;
+      top: 0.6rem;
+      right: 1.8rem;
+      z-index: 20;
+      color: v.$colorRedNeuDunkel3;
+      transition: all ease 0.20s;
+
+      &:hover,
+      &:focus {
+        @include n.teclaNeumorphismus1Hover;
+        border: 1px solid v.$backgroundColorDunkelGray4T;
+        transform: scale(0.86);
+      }
+
+      &>.iconClass {
+        transform: scale(1.25);
+      }
+    }
+  }
+
+  &>.containerLogos {
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    width: 18%;
+    z-index: 10;
+
+    &>.figure {
+      @include d.figure;
+      border-radius: 0%;
+      margin: 0% 2.5%;
+      margin-top: 10%;
+      padding: 0%;
+      background-color: transparent;
+
+      &>.imageLogo {
+        @include d.imageGenerall;
+        width: 2rem;
+        height: auto;
+        min-height: 2rem;
+        padding: 0%;
+        margin: 0% 1%;
+      }
+    }
+  }
+
+  &>.header-Principal {
+    height: 12vh;
+    background: v.$gradientSliceBluedark;
+
+    &>h2 {
+      @include d.desig_H_element (v.$colorHell4White, 1.8rem);
+      position: relative;
+      margin: 0%;
+      text-shadow: v.$textShadowWhite;
+    }
+  }
+
+  &>.containerMain {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+
+
+.containerLayout {
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.containerFooter {
+  @include l.layoutFlexboxRowCenter;
+  height: auto;
+}
+
+@keyframes App-logo-move {
+  0% {
+    transform: rotate(0deg) translateX(0px) scale(2) translateY(0px);
+    border-radius: 50%;
+  }
+
+  15% {
+    transform: rotate(-15deg) translateX(-20px) scale(2.2) translateY(-5px);
+  }
+
+  25% {
+    transform: rotate(15deg) translateX(20px) scale(2.4) translateY(5px);
+  }
+
+  50% {
+    transform: rotate(-15deg) translateX(-40px) scale(2.6) translateY(0px);
+  }
+
+  75% {
+    transform: rotate(15deg) translateX(40px) scale(2.4) translateY(-5px);
+  }
+
+  90% {
+    transform: rotate(-15deg) translateX(-20px) scale(2.2) translateY(5px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0px) scale(2) translateY(0px);
+    border-radius: 50%;
+  }
+}
+
+@keyframes changeColor {
+
+  0% {
+    color: v.$colorHell;
+  }
+
+  10% {
+    color: v.$colorHell0;
+  }
+
+  20% {
+    color: v.$colorHell1;
+  }
+
+  30% {
+    color: v.$colorHell2;
+  }
+
+  40% {
+    color: v.$colorHell3;
+  }
+
+  50% {
+    color: v.$colorHell4;
+  }
+
+  60% {
+    color: v.$colorHell5;
+  }
+
+  70% {
+    color: v.$colorHell6;
+  }
+
+  80% {
+    color: v.$colorHell7;
+  }
+
+  90% {
+    color: v.$colorHell8;
+  }
+
+  100% {
+    color: v.$colorHell9;
+  }
+}
