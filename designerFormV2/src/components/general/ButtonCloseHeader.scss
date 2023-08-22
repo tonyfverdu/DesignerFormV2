@@ -1,0 +1,25 @@
+@use '../../sass/myvariables' as v;
+@use '../../sass/neumorphismus' as n;
+
+
+.contIconExit {
+  @include n.teclaNeumorphismus1;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  z-index: 20;
+  color: v.$colorRedNeu;
+  transition: all ease 0.20s;
+
+  &:hover,
+  &:focus {
+    @include n.teclaNeumorphismus1Hover;
+    color: v.$colorRedNeuDunkel3;
+    border: 1px solid v.$backgroundColorDunkelGray4T;
+    transform: scale(0.85);
+  }
+
+  &>.iconClass {
+    transform: scale(1.25);
+  }
+}

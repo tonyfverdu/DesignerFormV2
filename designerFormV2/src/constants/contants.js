@@ -68,6 +68,18 @@ export const GROUP_BUTTONS_SELECT_LEFT = {
   height: "2rem",
   groupButton: "select_left"
 }
+export const GROUP_BUTTONS_SELECT_RIGHT = {
+  preId: "actionSelect_",
+  role: "groupRight",
+  arialLabel: "Radio toggle button group right",
+  typeButton: "radio",
+  nameInput: "btnradio2",
+  options: ["Delete", "Save", "View"],
+  colors: ["btn-outline-danger", "btn-outline-warning", "btn-outline-success"],
+  sizeLetter: "0.9rem",
+  height: "2rem",
+  groupButton: "select_left"
+}
 
 export const ELEMENT_TYPE = {
   PRINT: 'print',

@@ -7,78 +7,12 @@
 .contCentral {
   @include d.designContainerCentral;
 
-  .containerApp {
-    width: 100vw;
-    height: auto;
-
-    &>.contIconExit {
-      @include n.teclaNeumorphismus1;
-      position: absolute;
-      top: 0.6rem;
-      right: 1.8rem;
-      z-index: 20;
-      color: v.$colorRedNeuDunkel3;
-      transition: all ease 0.20s;
-
-      &:hover,
-      &:focus {
-        @include n.teclaNeumorphismus1Hover;
-        border: 1px solid v.$backgroundColorDunkelGray4T;
-        transform: scale(0.86);
-      }
-
-      &>.iconClass {
-        transform: scale(1.25);
-      }
-    }
-  }
-
-  &>.containerLogos {
-    position: absolute;
-    top: 0%;
-    left: 2%;
-    width: 18%;
-    z-index: 10;
-
-    &>.figure {
-      @include d.figure;
-      border-radius: 0%;
-      margin: 0% 2.5%;
-      margin-top: 10%;
-      padding: 0%;
-      background-color: transparent;
-
-      &>.imageLogo {
-        @include d.imageGenerall;
-        width: 2rem;
-        height: auto;
-        min-height: 2rem;
-        padding: 0%;
-        margin: 0% 1%;
-      }
-    }
-  }
-
-  &>.header-Principal {
-    height: 12vh;
-    background: v.$gradientSliceBluedark;
-
-    &>h2 {
-      @include d.desig_H_element (v.$colorHell4White, 1.8rem);
-      position: relative;
-      margin: 0%;
-      text-shadow: v.$textShadowWhite;
-    }
-  }
-
   &>.containerMain {
     width: 100%;
     height: auto;
     min-height: 100vh;
   }
 }
-
-
 
 .containerLayout {
   width: 100%;

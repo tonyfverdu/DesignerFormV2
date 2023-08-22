@@ -1,0 +1,202 @@
+@use './layouts' as l;
+@use './myvariables' as v;
+@use './designElement' as d;
+@use './neumorphismus' as n;
+@use './glassMorphismus' as g;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+//  Colour palette
+.indigo {
+  color: #6610f2;
+}
+
+.purple {
+  color: #6f42c1;
+}
+
+.pink {
+  color: #d63384;
+}
+
+.red {
+  color: #dc3545;
+}
+
+.orange {
+  color: #fd7e14;
+}
+
+.yellow {
+  color: #fd7e14;
+}
+
+.green {
+  color: #198754;
+}
+
+.teal {
+  color: #20c997;
+}
+
+.cyan {
+  color: #0dcaf0;
+}
+
+.backgroundColorGreenDunkel {
+  background-color: #016836ea;
+  color: white;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #01ac59ea;
+    transform: scale(0.95);
+  }
+}
+
+
+//  Grey colour palette
+.graycolor100 {
+  background-color: #f8f9fa;
+}
+
+.graycolor200 {
+  background-color: #e9ecef;
+}
+
+.graycolor300 {
+  background-color: #dee2e6;
+}
+
+.graycolor400 {
+  background-color: #ced4da;
+}
+
+.graycolor500 {
+  background-color: #adb5bd;
+}
+
+.graycolor600 {
+  background-color: #6c757d;
+}
+
+.graycolor700 {
+  background-color: #495057;
+}
+
+.graycolor800 {
+  background-color: #343a40;
+}
+
+.graycolor900 {
+  background-color: #212529;
+}
+
+.blueGradientColorDunkel {
+  background: v.$gradientSliceBluedark;
+}
+
+.blueGradientColorHell {
+  background: v.$gradientSliceBluedark2;
+}
+
+.backgroundColorBlue900 {
+  background-color: rgba(1, 1, 77, 0.9);
+}
+
+.backgroundColorBlue800 {
+  background-color: rgba(1, 1, 153, 0.9);
+}
+
+.backgroundColorBlue700 {
+  background-color: rgba(1, 1, 201, 0.9);
+}
+
+.backgroundColorBlue600 {
+  background-color: rgba(3, 3, 250, 0.9);
+}
+
+.backgroundColorBlue500 {
+  background-color: rgba(47, 47, 253, 0.9);
+}
+
+.backgroundColorBlue400 {
+  background-color: rgba(110, 110, 252, 0.9);
+}
+
+.backgroundColorBlue300 {
+  background-color: rgba(168, 168, 253, 0.9);
+}
+
+.backgroundColorBlue200 {
+  background-color: rgba(215, 215, 252, 0.9);
+}
+
+.backgroundColorBlue100 {
+  background-color: rgba(245, 245, 255, 0.9);
+}
+
+.graycolor700Color {
+  color: #495057;
+}
+
+.colorRedDunkel {
+  color: rgba(156, 2, 2, 0.9);
+}
+
+.colorBlueDunkel {
+  color: rgba(2, 0, 114, 0.9);
+}
+
+*,
+*:before,
+*:after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  // overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  // background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 1%, rgba(1, 99, 102, 0.7) 4%, rgba(0, 255, 200, 0.7) 12%,
+  //     rgba(59, 247, 247, 0.6) 20%, rgba(0, 255, 213, 0.6) 35%, white);
+  background-color: v.$backgroundColorIni;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+
+//  Animations    //////////////////////////////////////////////////////////
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    box-shadow: v.$boxShadow9;
+  }
+
+  to {
+    transform: rotate(720deg);
+    box-shadow: v.$boxShadow12;
+  }
+}
+
+@keyframes titleMove {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}

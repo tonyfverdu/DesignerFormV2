@@ -1,0 +1,21 @@
+@use '../../myvariables' as v;
+@use '../../layouts' as l;
+@use '../../designElement' as d;
+
+
+.contLabelElement_PB {
+  width:auto;
+  min-width: cal(max-content + 0.1%);
+  height: 2.4rem;
+
+  &>.labelElement {
+    position: relative;
+    width: auto;
+    min-width: fit-content;
+    height: auto;
+    margin: 0% auto;
+    padding: 0.1%;
+    font-weight: 700;
+    text-align: center;
+  }
+}

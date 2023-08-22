@@ -1,0 +1,52 @@
+@use '../../myvariables' as v;
+@use '../../layouts' as l;
+@use '../../designElement' as d;
+
+
+.contTextElement {
+  height: 2.4rem;
+
+  &>.labelOfForm {
+    position: relative;
+    width: auto;
+    min-width: fit-content;
+    height: auto;
+    margin: 0% auto;
+    padding: 0.1%;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  &>.contInputText {
+    @include d.configurationText1 (v.$backgroundColorDunkelGray5, 0.6rem);
+    width: cal(fit-content + 1%);
+    min-width: fit-content;
+    padding: 0.1%;
+    padding-left: 2%;
+    margin: 0%;
+    text-align: left;
+    border-radius: 3px;
+    border: 1px solid v.$backgroundColorDunkelGray4;
+  }
+
+  &>.textActiv {
+    @extend .contInputText;
+    transition: all ease 0.20s;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      max-height: 2.4rem;
+      border: 1px solid v.$colorHell4White;
+      box-shadow: v.$boxShadow16;
+    }
+  }
+
+  &>.textNotActiv {
+    @extend .contInputText;
+    color: v.$backgroundColorDunkelGray;
+    font-weight: 600;
+    background-color: v.$backgroundColorHellGrayT;
+    border: none;
+  }
+}

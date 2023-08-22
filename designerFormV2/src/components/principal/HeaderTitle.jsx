@@ -14,7 +14,7 @@ function HeaderTitle({ titleOfDesigner, titleSelectState, titleCreate }) {
   const { form, block, component } = titleCreate
 
   return (
-    <div className="contHeader container-fluid d-flex justify-content-between align-items-center gx-1" >
+    <div className="contHeader container-fluid d-flex justify-content-between align-items-center gx-1 m-0 py-1 px-2 rounded" >
       <div className="col-6 d-flex justify-content-between align-items-center gap-2" >
         <div className="d-flex flex-row justify-content-between align-items-center" >
           <SelectLayoutForm
@@ -55,8 +55,8 @@ function HeaderTitle({ titleOfDesigner, titleSelectState, titleCreate }) {
         </div>
       </div>
 
-      <div className="col-6 d-flex justify-content-end align-items-center">
-        <div className="d-flex flex-row justify-content-between align-items-center">
+      <div className="col-6 d-flex justify-content-end align-items-center mt-2" >
+        <div className="d-flex flex-row justify-content-between align-items-center" >
           {
             theContext.optionDesigner === "form" ?
               <>
@@ -65,7 +65,7 @@ function HeaderTitle({ titleOfDesigner, titleSelectState, titleCreate }) {
                 />
                 <SelectForm
                   height_dim={"1"}
-                  width_dim={"23rem"}
+                  width_dim={"22rem"}
                 />
               </>
               :

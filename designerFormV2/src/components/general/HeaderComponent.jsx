@@ -1,7 +1,5 @@
-import React from "react"
-import '../../sass/componentSass/HeaderComponent.scss'
-import logo from '../../assets/logos/logo.svg'
-
+import logo from '../../assets/logos/logo.svg';
+import './HeaderComponent.scss';
 
 function HeaderComponent({ title, subtitle }) {
   return (

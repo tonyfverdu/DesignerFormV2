@@ -1,0 +1,42 @@
+@use '../../sass/myvariables' as v;
+@use '../../sass/designElement' as d;
+
+
+.containerLogos {
+  position: absolute;
+  top: 0%;
+  left: 2%;
+  width: 18%;
+  z-index: 10;
+
+  &>.figure {
+    @include d.figure;
+    border-radius: 0%;
+    margin: 0% 2.5%;
+    margin-top: 10%;
+    padding: 0%;
+    background-color: transparent;
+
+    &>.imageLogo {
+      @include d.imageGenerall;
+      width: 2rem;
+      height: auto;
+      min-height: 2rem;
+      padding: 0%;
+      margin: 0% 1%;
+    }
+  }
+}
+
+.header-Principal {
+  height: 12vh;
+  background: v.$gradientSliceBluedark;
+
+  &>h2 {
+    @include d.desig_H_element (v.$colorHell4White, 1.8rem);
+    position: relative;
+    margin: 0%;
+    text-shadow: v.$textShadowWhite;
+  }
+}
+

@@ -1,0 +1,61 @@
+@use '../../myvariables' as v;
+@use '../../layouts' as l;
+@use '../../designElement' as d;
+
+
+.contCol {
+  height: 2.4rem;
+}
+
+.circleCol {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  transition: all ease 0.20s;
+
+  &>span {
+    @include l.layoutFlexboxRowCenter;
+    padding: 3px;
+    font-size: 0.8rem;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(0.9);
+    background-color: v.$colorRedNeu;
+    border: 1px solid v.$colorRedNeu3;
+    color: v.$colorRedNeu;
+    font-weight: bolder;
+
+    &>span {
+      color: v.$colorHell;
+      font-size: 0.65rem;
+      font-weight: bolder;
+    }
+  }
+}
+
+.circleColPlus {
+  @extend .circleCol;
+
+  background-color: v.$backgroundColorHellGrayT3;
+  border: 1px solid v.$backgroundColorBlack1;
+  color: v.$backgroundColorIni;
+}
+
+.circleColSpace {
+  @extend .circleCol;
+
+  background-color: v.$colorDarkBlue1;
+  border: 1px solid v.$colorDarkBlueNavy;
+  color: v.$backgroundColorIni;
+}
+
+.circleColMinus {
+  @extend .circleCol;
+
+  background-color: v.$colorRedNeu;
+  border: 1px solid v.$colorRedNeu;
+  color: v.$colorHell;
+}

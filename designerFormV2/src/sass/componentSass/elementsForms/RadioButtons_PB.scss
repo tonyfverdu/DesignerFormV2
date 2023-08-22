@@ -1,0 +1,44 @@
+@use '../../myvariables' as v;
+@use '../../layouts' as l;
+@use '../../designElement' as d;
+
+.contRadioButtons {
+  height: auto;
+  transition: all ease 0.20s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: 2px ridge v.$colorHell2;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  &>fieldset {
+
+    &>legend {
+      @include d.configurationLabel (v.$colorElementIni, 0.65rem);
+      text-align: left;
+      width: fit-content;
+      min-width: auto;
+      height: 2rem;
+      padding: 0.1%;
+      margin: 0%;
+      margin-right: 2%;
+    }
+
+    &>.contUL {
+      width: 12rem;
+      min-width: fit-content;
+      height: auto;
+      
+      &>li {
+        @include l.layoutFlexboxRowCenter;
+        width: cal(auto + 5%);
+        min-width: auto;
+        height: auto;
+        padding: 1%;
+      }
+    }
+  }
+}

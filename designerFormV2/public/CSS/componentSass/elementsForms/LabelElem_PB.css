@@ -1,0 +1,17 @@
+.contLabelElement_PB {
+  width: auto;
+  min-width: cal(max-content0.1%);
+  height: 2.4rem;
+}
+.contLabelElement_PB > .labelElement {
+  position: relative;
+  width: auto;
+  min-width: fit-content;
+  height: auto;
+  margin: 0% auto;
+  padding: 0.1%;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*# sourceMappingURL=LabelElem_PB.css.map */
